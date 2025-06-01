@@ -47,13 +47,13 @@
         else if(this.cryptoFirst == 'BTC' && this.cryptoSecond == 'USDT')
           this.result = convert.BTC.USDT(this.amount);
         else if(this.cryptoFirst == 'ETH' && this.cryptoSecond == 'BTC')
-          this.result = convert.BTC.USDT(this.amount);
+          this.result = convert.ETH.BTC(this.amount);
         else if(this.cryptoFirst == 'ETH' && this.cryptoSecond == 'USDT')
-          this.result = convert.BTC.USDT(this.amount);
+          this.result = convert.ETH.USDT(this.amount);
         else if(this.cryptoFirst == 'USDT' && this.cryptoSecond == 'BTC')
-          this.result = convert.BTC.USDT(this.amount);
+          this.result = convert.USDT.BTC(this.amount);
         else if(this.cryptoFirst == 'USDT' && this.cryptoSecond == 'ETH')
-          this.result = convert.BTC.USDT(this.amount);
+          this.result = convert.USDT.ETH(this.amount);
       }
     }
   }

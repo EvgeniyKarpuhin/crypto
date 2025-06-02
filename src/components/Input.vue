@@ -1,7 +1,10 @@
 <template>
   <input min="0" type="number" @input="changeAmount($event.target.value)" placeholder="Введите число"></br>
-  <button @click="convert()">Конверитровать</button>
-  <button @click="favourite()">В избранное</button>
+  <div>
+    <button @click="convert()">Конверитровать</button>
+    <button @click="favourite()" class="btn-mrg">В избранное</button>
+  </div>
+  
 </template>
 
 <script>
@@ -38,10 +41,7 @@
     }
 
     button {
-        display: flex;
-        margin: auto;
-        margin-top: -10px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         padding: 15px 20px;
         text-transform: uppercase;
         color: #fff;
@@ -54,5 +54,9 @@
 
     button:hover {
         transform: scale(1.1);
+    }
+
+    button.btn-mrg {
+        margin-left: 20px;
     }
 </style>

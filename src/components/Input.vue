@@ -1,6 +1,7 @@
 <template>
   <input min="0" type="number" @input="changeAmount($event.target.value)" placeholder="Введите число"></br>
   <button @click="convert()">Конверитровать</button>
+  <button @click="favourite()">В избранное</button>
 </template>
 
 <script>
@@ -11,6 +12,10 @@
                 required: true
             },
             convert: {
+                type: Function,
+                required: true
+            },
+            favourite: {
                 type: Function,
                 required: true
             }
@@ -44,5 +49,10 @@
         background: #1a032d;
         border: 0;
         border-radius: 3px;
+        transition: transform 500ms ease;
+    }
+
+    button:hover {
+        transform: scale(1.1);
     }
 </style>
